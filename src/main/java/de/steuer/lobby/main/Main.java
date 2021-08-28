@@ -69,7 +69,7 @@ public class Main extends JavaPlugin {
         //VANISH
         Main.instance = this;
         this.vanishManager = new VanishManager((Plugin)this);
-        getCommand("v").setExecutor(new vanishCMD());
+        getCommand("vanish").setExecutor(new vanishCMD());
 
         //COMMANDS
         getCommand("build").setExecutor(new buildCMD());

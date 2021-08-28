@@ -1,19 +1,17 @@
 package de.steuer.lobby.vanish;
 
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.*;
 import org.bukkit.entity.*;
 import org.bukkit.*;
-import org.jetbrains.annotations.NotNull;
-
 import java.util.*;
 
-public class VanishManager {
-    private Plugin plugin;
+public class VanishManager
+{
+    private final Plugin plugin;
     private final List<Player> vanished;
 
-    public VanishManager(Plugin plugin) {
-        this.plugin = this.plugin;
+    public VanishManager(final Plugin plugin) {
+        this.plugin = plugin;
         this.vanished = new ArrayList<Player>();
     }
 

@@ -5,11 +5,11 @@ author: lowtime
 main: de.steuer.lobby.main.Main
 commands:
   build:
-  v:
+  vanish:
     permission: lobby.vanish
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
     aliases:
-      - vanish
+      - v
   spawn:
   aids:
     permission: lobby.aids
@@ -56,7 +56,4 @@ commands:
       - gm-3
   reloadlobby:
     permission: lobby.reload
-    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
-  vanish:
-    permission: lobby.vanish
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!

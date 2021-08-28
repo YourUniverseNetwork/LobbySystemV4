@@ -11,6 +11,10 @@ commands:
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
     aliases:
       - hiv
+  huhn:
+    aliases:
+      - chicken
+      - chickenwings
   chatclear:
     permission: lobby.chatclear
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!

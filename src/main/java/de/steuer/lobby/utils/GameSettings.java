@@ -11,6 +11,8 @@ import org.bukkit.event.player.*;
 import org.bukkit.event.block.*;
 import org.bukkit.*;
 
+import java.util.Objects;
+
 public class GameSettings implements Listener
 {
     @EventHandler
@@ -32,7 +34,7 @@ public class GameSettings implements Listener
     public void onMove(final PlayerMoveEvent e) {
         final Player p = e.getPlayer();
         if (!Main.build.contains(p) && p.getLocation().getY() < heightCMD.cfg.getInt("Height")) {
-            p.teleport((Location)heightCMD.cfg.get("Location.Spawn"));
+            p.teleport((Location) Objects.requireNonNull(heightCMD.cfg.get("Location.Spawn")));
             p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 10.0f, 10.0f);
         }
     }

@@ -29,6 +29,11 @@ commands:
   cloudtps:
     permission: lobby.cloudtps
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+    aliases:
+      - tps
+      - servertps
+      - performance
+      - lobbystats
   gms:
     permission: lobby.gms
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!

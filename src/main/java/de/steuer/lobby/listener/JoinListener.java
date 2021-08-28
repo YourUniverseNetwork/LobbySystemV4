@@ -41,7 +41,7 @@ public class JoinListener implements Listener {
         p.setMaxHealth(10.0);
         p.setHealth(10);
         p.setFoodLevel(20);
-        p.sendMessage("§eWillkommen auf §bUniverseNetwork§7, §ewir wünschen dir viel Spaß und eine schöne Zeit §l:^)");
+        p.sendMessage("§eWillkommen auf §bUniverseNetwork§7, §ewir wünschen dir viel Spaß und eine schöne Zeit §b:^)");
         p.setLevel(2021);
         p.setExp(0.0f);
 

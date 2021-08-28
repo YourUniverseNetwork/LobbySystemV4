@@ -15,7 +15,7 @@ public class tpsCMD implements CommandExecutor {
         double tps = Lag.getTPS();
         double lag = Math.round((1.0D - tps / 100.0D) * 100.0D);
 
-        player.sendTitle("§a§l" + tps + "", "§aCloud TPS");
+        player.sendTitle("§a§l" + tps + "", "§aServer TPS");
         player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_BUTTON_CLICK_ON, 10.0f, 10.0f);
 
         return false;

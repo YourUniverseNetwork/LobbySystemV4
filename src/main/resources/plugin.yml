@@ -6,6 +6,11 @@ main: de.steuer.lobby.main.Main
 commands:
   build:
   spawn:
+  aids:
+    permission: lobby.aids
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+    aliases:
+      - hiv
   chatclear:
     permission: lobby.chatclear
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!

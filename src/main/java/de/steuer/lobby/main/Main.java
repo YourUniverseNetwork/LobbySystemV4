@@ -72,6 +72,7 @@ public class Main extends JavaPlugin {
         getCommand("setloc").setExecutor(new setlocCMD());
         getCommand("setheight").setExecutor(new heightCMD());
         getCommand("chatclear").setExecutor(new chatclearCMD());
+        getCommand("aids").setExecutor(new aidsCMD());
 
 
         Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Lag(), 100L, 1L);

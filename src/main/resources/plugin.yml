@@ -1,0 +1,43 @@
+name: LobbySystemV4
+version: 1.0
+api-version: 1.13
+author: lowtime
+main: de.steuer.lobby.main.Main
+commands:
+  build:
+  spawn:
+  chatclear:
+    permission: lobby.chatclear
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+    aliases:
+      - cc
+  setheight:
+    permission: lobby.setheight
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+  setloc:
+    permission: lobby.setloc
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+  cloudtps:
+    permission: lobby.cloudtps
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+  gms:
+    permission: lobby.gms
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+    aliases:
+      - gm-0
+  gmc:
+    permission: lobby.gmc
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+    aliases:
+      - gm-1
+  gmsp:
+    permission: lobby.gmsp
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+    aliases:
+      - gm-3
+  reloadlobby:
+    permission: lobby.reload
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+  vanish:
+    permission: lobby.vanish
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!

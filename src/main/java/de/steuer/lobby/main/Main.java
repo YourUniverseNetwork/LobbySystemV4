@@ -6,10 +6,13 @@ import de.steuer.lobby.playerhider.PlayerHiderListener;
 import de.steuer.lobby.playerhider.VisibleManager;
 import de.steuer.lobby.utils.MySQL;
 import de.steuer.lobby.utils.SettingsSystem;
+import de.steuer.lobby.vanish.VanishManager;
+import de.steuer.lobby.vanish.vanishCMD;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -34,6 +37,7 @@ public class Main extends JavaPlugin {
     public static FileConfiguration cfg;
     private static char[] pr;
     private static  ArrayList<UUID> noplayersvisible;
+    private VanishManager vanishManager;
 
 
 
@@ -61,6 +65,11 @@ public class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new InteractListener(), this);
         Bukkit.getPluginManager().registerEvents(new Lag(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerHiderListener(), this);
+
+        //VANISH
+        Main.instance = this;
+        this.vanishManager = new VanishManager((Plugin)this);
+        getCommand("v").setExecutor(new vanishCMD());
 
         //COMMANDS
         getCommand("build").setExecutor(new buildCMD());
@@ -122,5 +131,8 @@ public class Main extends JavaPlugin {
 
     public static VisibleManager getVisibleManager() {
         return visibleManager;
+    }
+    public VanishManager getVanishManager() {
+        return this.vanishManager;
     }
 }

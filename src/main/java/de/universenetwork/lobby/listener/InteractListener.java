@@ -108,7 +108,7 @@ public class InteractListener implements Listener {
 
                     p.openInventory(inv);
                 }
-            } else if (e.getItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aSchwert von den §bGeistlichen")) {
+            } else if (e.getItem().getItemMeta().getDisplayName().equalsIgnoreCase("§b§lProfil")) {
                 if (e.getItem().getType() == WOODEN_SWORD) {
                     p.sendTitle(Main.prefix + "", "§aDas Schwert, §7kommt aus den §bMinen von Bergninen.");
                 }

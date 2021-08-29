@@ -21,8 +21,9 @@ public class InteractListener implements Listener {
 
     @EventHandler
     public void onInteract(final PlayerInteractEvent e) {
-        final Player p = e.getPlayer();
 
+        final Player p = e.getPlayer();
+        if (e.getItem() != null || e.getItem().getType() != AIR) {
             if ((e.getItem()).getItemMeta().getDisplayName().equalsIgnoreCase("§d§lNavigator")) {
                 if (e.getItem().getType() == NETHER_STAR) {
                     final Inventory inv = Bukkit.createInventory(null, 54, Component.text("§d§lNavigator"));
@@ -38,7 +39,7 @@ public class InteractListener implements Listener {
                         return;
                     }, 1L);
 
-                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin)Main.instance, () -> {
+                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin) Main.instance, () -> {
                         inv.setItem(6, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
                         inv.setItem(7, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
                         inv.setItem(8, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
@@ -48,7 +49,7 @@ public class InteractListener implements Listener {
                         return;
                     }, 2L);
 
-                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin)Main.instance, () -> {
+                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin) Main.instance, () -> {
                         inv.setItem(27, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
                         inv.setItem(36, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
                         inv.setItem(17, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
@@ -60,7 +61,7 @@ public class InteractListener implements Listener {
                         return;
                     }, 3L);
 
-                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin)Main.instance, () -> {
+                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin) Main.instance, () -> {
                         inv.setItem(27, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
                         inv.setItem(36, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
                         inv.setItem(17, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
@@ -72,7 +73,7 @@ public class InteractListener implements Listener {
                         return;
                     }, 4L);
 
-                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin)Main.instance, () -> {
+                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin) Main.instance, () -> {
                         inv.setItem(46, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
                         inv.setItem(47, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
                         inv.setItem(48, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
@@ -85,7 +86,7 @@ public class InteractListener implements Listener {
                         return;
                     }, 5L);
 
-                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin)Main.instance, () -> {
+                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin) Main.instance, () -> {
                         inv.setItem(46, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
                         inv.setItem(47, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
                         inv.setItem(48, new ItemBuilder(WHITE_STAINED_GLASS_PANE).setName("§a").toItemStack());
@@ -99,9 +100,7 @@ public class InteractListener implements Listener {
                     }, 6L);
 
 
-
-
-                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin)Main.instance, () -> {
+                    Bukkit.getScheduler().runTaskLaterAsynchronously((Plugin) Main.instance, () -> {
                         inv.setItem(22, new ItemBuilder(Material.BEACON).setName("§e§lNPCs").toItemStack());
                         p.playSound(p.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 10.0f, 10.0f);
                         return;
@@ -114,6 +113,7 @@ public class InteractListener implements Listener {
                     p.sendTitle(prefix + "", "§7Dieses Schwert wurde hergestellt in §ageheimen Bergruinen§7!");
                 }
             }
+        }
     }
 
     @EventHandler

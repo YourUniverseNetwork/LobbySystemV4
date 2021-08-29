@@ -5,7 +5,21 @@ author: lowtime
 main: de.steuer.lobby.main.Main
 commands:
   build:
-  spawn:
+  coins:
+  vanish:
+    permission: lobby.vanish
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+    aliases:
+      - v
+  aids:
+    permission: lobby.aids
+    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+    aliases:
+      - hiv
+  huhn:
+    aliases:
+      - chicken
+      - chickenwings
   chatclear:
     permission: lobby.chatclear
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
@@ -20,6 +34,11 @@ commands:
   cloudtps:
     permission: lobby.cloudtps
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
+    aliases:
+      - tps
+      - servertps
+      - performance
+      - lobbystats
   gms:
     permission: lobby.gms
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
@@ -37,7 +56,4 @@ commands:
       - gm-3
   reloadlobby:
     permission: lobby.reload
-    permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
-  vanish:
-    permission: lobby.vanish
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!

@@ -5,6 +5,7 @@ author: lowtime
 main: de.steuer.lobby.main.Main
 commands:
   build:
+  coins:
   vanish:
     permission: lobby.vanish
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!

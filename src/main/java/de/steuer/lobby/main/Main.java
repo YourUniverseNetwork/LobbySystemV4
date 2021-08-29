@@ -83,6 +83,7 @@ public class Main extends JavaPlugin {
         getCommand("chatclear").setExecutor(new chatclearCMD());
         getCommand("aids").setExecutor(new aidsCMD());
         getCommand("huhn").setExecutor(new huhnCMD());
+        getCommand("coins").setExecutor(new coinCMD());
 
 
         Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Lag(), 100L, 1L);

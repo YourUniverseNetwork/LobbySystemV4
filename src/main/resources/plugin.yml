@@ -10,7 +10,6 @@ commands:
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!
     aliases:
       - v
-  spawn:
   aids:
     permission: lobby.aids
     permission-message: §8| §b§lUniverse§f§lNetwork §r§8| §cDazu hast du keine Rechte!

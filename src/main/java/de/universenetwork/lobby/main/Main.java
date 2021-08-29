@@ -1,7 +1,6 @@
 package de.universenetwork.lobby.main;
 
-import de.steuer.lobby.commands.*;
-import de.steuer.lobby.listener.*;
+
 import de.universenetwork.lobby.commands.*;
 import de.universenetwork.lobby.listener.*;
 import de.universenetwork.lobby.playerhider.PlayerHiderListener;

@@ -14,6 +14,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.util.Objects;
 
+import static de.universenetwork.lobby.main.Main.prefix;
 import static org.bukkit.Material.*;
 
 public class InteractListener implements Listener {
@@ -108,8 +109,9 @@ public class InteractListener implements Listener {
 
                     p.openInventory(inv);
                 }
-            } else if (e.getItem().getItemMeta().getDisplayName().equalsIgnoreCase("§b§lProfil")) {
-                if (e.getItem().getType() == WOODEN_AXE) {
+            } else if (e.getItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aSchwert von den §bGeistlichen")) {
+                if (e.getItem().getType() == WOODEN_SWORD) {
+                    p.sendTitle(prefix + "", "§7Dieses Schwert wurde hergestellt in §ageheimen Bergruinen§7!");
                 }
             }
     }
@@ -126,8 +128,8 @@ public class InteractListener implements Listener {
                         p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 10.0f, 10.0f);
                     } else {
                         p.closeInventory();
-                        p.sendTitle(Main.prefix + "", "§c§lERROR, §7Warp: §cNPCs §7nicht gefunden!");
-                        p.sendMessage(Main.prefix + "§cEs wurde die Location NPCs nicht gesetzt!");
+                        p.sendTitle(prefix + "", "§c§lERROR, §7Warp: §cNPCs §7nicht gefunden!");
+                        p.sendMessage(prefix + "§cEs wurde die Location NPCs nicht gesetzt!");
                         p.playSound(p.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 10.0f, 10.0f);
                     }
                 }
